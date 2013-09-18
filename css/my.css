@@ -1,0 +1,44 @@
+body {
+    margin: 0; /* Убираем отступы */
+}
+img {
+    width: 350px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+p.description {
+    display: none;
+    width: 350px;
+    padding: 10px;
+    background-color: lavender;
+    background-size: contain;
+    border-radius: 10px;
+    color: grey;
+    text-align: match-parent;
+    margin-left: 36%;
+}
+h3 {
+    color: gray;
+}
+ul{
+    list-style-type: none;
+    text-align: center;
+}
+a {
+    padding: 10px;
+    border-radius: 20px 20px;
+    font-family: Tahoma, fantasy;
+    color: grey;
+    text-decoration: none;
+
+}
+nav {
+    background-image: -moz-linear-gradient(top right, lavender, greenyellow);
+    padding: 40px;
+    margin: 0% 15%;
+    border: 2px, ridge, lavender;
+    border-radius: 20px;
+    text-align: center;
+}
+img.map {
+}
