@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Sweet fun</title>
+    <meta charset="utf-8">
+
+    {% block extra_js %} {% endblock %}
+
+    <link rel="stylesheet" type="text/css" href="/static/css/my.css" />
+
+    {% block extra_css %} {% endblock %}
+
+</head>
+<body>
+<div id="navigation">
+    <nav>
+        <a href="index.html">Главная</a> | <a href="about.html">О нас</a> | <a>Сладкая галлерея</a>
+    </nav>
+</div>
+
+<div id="content">
+    {% block content %} {% endblock %}
+
+</div>
+</body>
+</html>

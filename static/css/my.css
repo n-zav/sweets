@@ -1,5 +1,15 @@
+html {
+    height: 100%
+}
 body {
-    margin: 0; /* Убираем отступы */
+    height: 100%;
+    margin: 0;
+    padding: 0
+}
+#map_canvas {
+    height: 100%;
+    border-radius: 10px;
+    margin: auto;
 }
 img {
     width: 350px;
@@ -20,7 +30,7 @@ p.description {
 h3 {
     color: gray;
 }
-ul{
+ul.image{
     list-style-type: none;
     text-align: center;
 }
@@ -39,6 +49,4 @@ nav {
     border: 2px, ridge, lavender;
     border-radius: 20px;
     text-align: center;
-}
-img.map {
 }

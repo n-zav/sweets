@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sweet fun</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" type="text/css" href="../static/css/my.css" />
+
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDrT6i7_0M5_-n7Nlls-HfG0acPkB5QKOg&sensor=false">
+    </script>
+
+    <script type="text/javascript">
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(48.0001730, 37.8571290);
+        var mapOptions = {
+            zoomControl: true,
+            zoomControlOptions: google.maps.ZoomControlStyle.LARGE,
+            center: myLatlng,
+            zoom: 17,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Ул. Гутченко 29, "Большая Стирка"'
+  });
+
+      }
+    </script>
+</head>
+<body onload="initialize()">
+    <div id="navigation">
+        <nav>
+            <a href="index.html">Главная</a> | <a href="about.html">О нас</a> | <a>Сладкая галлерея</a>
+        </nav>
+    </div>
+
+    <div id="map_canvas" style="width:50%; height:60%">
+    </div>
+
+</body>
+</html>
