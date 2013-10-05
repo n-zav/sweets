@@ -1,11 +1,12 @@
 from django.conf.urls import patterns, include, url
-from sweets.views import HomePageView
+from sweets.views import HomePageView, AboutView
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 urlpatterns = patterns('',
                       (r'^$', HomePageView.as_view()),
+                      (r'^about/', AboutView.as_view()),
     # Examples:
     # url(r'^$', 'sweets.views.home', name='home'),
     # url(r'^sweets/', include('sweets.foo.urls')),

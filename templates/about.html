@@ -1,46 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sweet fun</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+{% extends "base.html" %}
+{% load staticfiles %}
 
+{% block extra_js %}
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/ui/min/jquery.ui.map.full.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/map.js"></script>
 
-    <script type="text/javascript"
-      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDrT6i7_0M5_-n7Nlls-HfG0acPkB5QKOg&sensor=false">
-    </script>
+{% endblock %}
 
-    <script type="text/javascript">
-      function initialize() {
-        var myLatlng = new google.maps.LatLng(48.0001730, 37.8571290);
-        var mapOptions = {
-            zoomControl: true,
-            zoomControlOptions: google.maps.ZoomControlStyle.LARGE,
-            center: myLatlng,
-            zoom: 17,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map_canvas"),
-            mapOptions);
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            title: 'Ул. Гутченко 29, "Большая Стирка"'
-  });
-
-      }
-    </script>
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/my.css" />
-
-</head>
-<body onload="initialize()">
-    <div id="navigation">
-        <nav>
-            <a href="index.html">Главная</a> | <a href="about.html">О нас</a> | <a>Сладкая галлерея</a>
-        </nav>
+{% block content %}
+    <div id="about">
+        <h3> О нас </h3>
+        <p>Композиция из конфет это и сладкий подарок, и украшение стола, и приятный сюрприз.
+        <br/>
+        Мы делаем композиции любого размера, стиля и открыты для ваших творческих предложений.
+        Конфеты вы можете выбрать самостоятельно, а можете доверить это нам.
+        </p>
+        <img src="{{ STATIC_URL }}images/photo.JPG">
     </div>
-
-    <div id="map_canvas" style="width:50%; height:60%">
-    </div>
-
-</body>
-</html>
+    <div id="map_canvas" style="width:500px;height:400px"></div>
+{% endblock %}

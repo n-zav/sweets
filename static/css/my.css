@@ -4,49 +4,78 @@ html {
 body {
     height: 100%;
     margin: 0;
-    padding: 0
+    padding: 0;
+    background-image: url(/static/images/background2.jpg);
 }
 #map_canvas {
-    height: 100%;
     border-radius: 10px;
     margin: auto;
+    float: left;
 }
 img {
     width: 350px;
     border-radius: 10px;
     cursor: pointer;
+    position: relative;
+    text-align: center;
 }
 p.description {
     display: none;
     width: 350px;
     padding: 10px;
-    background-color: lavender;
     background-size: contain;
     border-radius: 10px;
-    color: grey;
-    text-align: match-parent;
-    margin-left: 36%;
-}
-h3 {
-    color: gray;
 }
 ul.image{
     list-style-type: none;
+    position: relative;
     text-align: center;
+}
+ul#menu {
+    list-style:none;
+    margin:5px auto 0 auto;
+    width: 750px;
+    height: 30px;
+    background-color: #F57C85;
+    border-radius: 10px 10px 0 0;
+    padding:10px;
+    overflow:auto; /* makes sure the container fits the floated list-items below */
+    text-align: center;
+}
+ul#menu li{
+    position:relative; /* allows us to set the z-index */
+    z-index:5; /* raises the z-index of the line item 5 levels all other elements */
+    margin:3px 5px;
+    padding:5px 10px 4px;
+    float:left; /* floats list items to the left, creating a horizontal menu */
+}
+ul#menu li.backLava {
+    background-color:#F8CD64;
+    border-radius: 10px;
 }
 a {
-    padding: 10px;
-    border-radius: 20px 20px;
-    font-family: Tahoma, fantasy;
-    color: grey;
+    color: white;
     text-decoration: none;
-
 }
-nav {
-    background-image: -moz-linear-gradient(top right, lavender, greenyellow);
-    padding: 40px;
-    margin: 0% 15%;
-    border: 2px, ridge, lavender;
-    border-radius: 20px;
-    text-align: center;
+#container {
+    margin: 0 auto 0 auto;
+    padding: 0;
+    background: white;
+    width: 770px;
+}
+#content {
+    height: 100%;
+    margin: 0 40px 0 40px;
+    padding: 10px 0 0 0;
+}
+p#about {
+    font-family: fantasy;
+    float: left;
+    margin: 0 auto 0 auto;
+    background-color: lavender;
+}
+img#about {
+    width: 350px;
+    border-radius: 10px;
+    float: right
 }
