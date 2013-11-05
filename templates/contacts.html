@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="contacts">
+        <h3>Наши контакты:</h3>
+        <p>ул. Гутченкова 29, г. Донецк</p>
+        <p>+380 95 702 74 04</p>
+        <p>+380 67 624 43 15</p>
+        <form action="/contact/" method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit" />
+        </form>
+
+
+    </div>
+{% endblock %}
