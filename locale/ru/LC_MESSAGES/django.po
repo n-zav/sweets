@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-05 02:52+0100\n"
+"POT-Creation-Date: 2013-11-06 01:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,75 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: sweets/forms.py:6
+#: templates/about.html:7 templates/base.html:26
+msgid "About us"
+msgstr "О нас"
+
+#: templates/about.html:8
+msgid ""
+"Candy composition is always a sweet present, a decoration, and a nice "
+"surprise"
+msgstr ""
+"Композиция из конфет это и сладкий подарок, и украшение стола, и приятный "
+"сюрприз"
+
+#: templates/about.html:10
+msgid ""
+"\n"
+"            We make compositions of any size and style. We are open for your "
+"creative ideas.\n"
+"            You also can choose candies on your own or we can do it for you\n"
+"        "
+msgstr ""
+"\n"
+"            Мы делаем композиции любого размера, стиля. Мы открыты для ваших "
+"творческих предложений.\n"
+"        Конфеты вы можете выбрать самостоятельно, а можете доверить это "
+"нам.        "
+
+#: templates/base.html:25
+msgid "Main"
+msgstr "Главная"
+
+#: templates/base.html:27
+msgid "Sweet gallery"
+msgstr "Сладкая галлерея"
+
+#: templates/base.html:28
+msgid "Contacts"
+msgstr "Контакты"
+
+#: templates/base.html:29
+msgid "Feedback"
+msgstr "Обратная связь"
+
+#: templates/contacts.html:12
+msgid "Our contacts:"
+msgstr "Наши контакты:"
+
+#: templates/contacts.html:13
+msgid "Gutchenkova str. 29, Donetsk"
+msgstr "ул. Гутченкова 29, Донецк"
+
+#: templates/feedback.html:9
 msgid "Name"
 msgstr "Имя"
+
+#: templates/feedback.html:14
+msgid "Subject"
+msgstr "Тема"
+
+#: templates/feedback.html:19
+msgid "Message"
+msgstr "Сообщение"
+
+#: templates/feedback.html:24
+msgid "Email"
+msgstr "Email"
+
+#: templates/feedback.html:27
+msgid "Submit"
+msgstr "Отправить"
+
+#~ msgid "Copyright"
+#~ msgstr "Опа-попа-копирайт ()с.."

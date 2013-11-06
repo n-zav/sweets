@@ -3,7 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class ContactForm(forms.Form):
-    name = forms.CharField(label=_("Name"), widget=forms.TextInput(attrs={'class': 'special', 'text-align': 'center'}))
-    subject = forms.CharField()
-    message = forms.CharField(widget=forms.Textarea(attrs={'size': '40'}))
-    email = forms.EmailField()
+    name = forms.CharField(widget=forms.TextInput(attrs={'class': 'field'}))
+    subject = forms.CharField(widget=forms.TextInput(attrs={'class': 'field'}))
+    message = forms.CharField(widget=forms.Textarea(attrs={'class': 'text-field'}))
+    sender = forms.EmailField(widget=forms.TextInput(attrs={'class': 'field'}))

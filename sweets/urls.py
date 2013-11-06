@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView
-from sweets.views import HomePageView, contact
+from sweets.views import HomePageView, feedback
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
@@ -9,7 +9,9 @@ urlpatterns = patterns('',
                        url(r'^$', HomePageView.as_view(), name='home'),
                        url(r'^about/', TemplateView.as_view(template_name="about.html"),
                            name='about'),
-                       url(r'^contact/', contact, name='contact'),
+                       url(r'^contact/', TemplateView.as_view(template_name="contacts.html"),
+                           name='contact'),
+                       url(r'^feedback/', feedback, name='feedback'),
                        url(r'^thanks/', TemplateView.as_view(template_name="thanks.html"),
                            name='thanks'),
     # Examples:

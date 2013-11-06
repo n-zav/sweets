@@ -64,17 +64,27 @@ a {
 }
 #content {
     height: 100%;
-    margin: 0 40px 0 40px;
+    margin: 0 40px 40px 40px;
     padding: 10px 0 0 0;
 }
-p#about {
+p.about {
+    width: 335px;
     font-family: fantasy;
-    float: left;
+    float: right;
     margin: 0 auto 0 auto;
-    background-color: lavender;
 }
 img#about {
-    width: 350px;
+    width: 335px;
     border-radius: 10px;
-    float: right
+    margin-right: 335px;
+}
+.field {
+    height: 25px;
+    width: 450px;
+}
+.text-field {
+    width: 450px;
+}
+form {
+    padding-bottom: 30px;
 }

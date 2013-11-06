@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <form action="/feedback/" method="post">{% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="fieldWrapper">
+                {{ form.name.errors }}
+                <p><label for="id_name">{% trans "Name" %}:</label>
+                <br/>{{ form.name }}</p>
+            </div>
+            <div class="fieldWrapper">
+                {{ form.subject.errors }}
+                <p><label for="id_subject">{% trans "Subject" %}:</label>
+                <br/>{{ form.subject }}</p>
+            </div>
+            <div class="fieldWrapper">
+                {{ form.message.errors }}
+                <p><label for="id_message">{% trans "Message" %}:</label>
+                <br/>{{ form.message }}</p>
+            </div>
+            <div class="fieldWrapper">
+                {{ form.sender.errors }}
+                <p><label for="id_sender">{% trans "Email" %}:</label>
+                <br/>{{ form.sender }}</p>
+            </div>
+            <p><input type="submit" value="{% trans "Submit" %}" /></p>
+        </form>
+{% endblock %}

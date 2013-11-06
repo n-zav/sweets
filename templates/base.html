@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
@@ -21,10 +22,11 @@
 <body>
 
 <ul id="menu">
-    <li><a href="/">Главная</a></li>
-    <li><a href="about">О нас</a></li>
-    <li><a href="/">Сладкая галлерея</a></li>
-    <li><a href="contact/">Контакты</a></li>
+    <li><a href="/">{% trans "Main" %}</a></li>
+    <li><a href="about">{% trans "About us" %}</a></li>
+    <li><a href="/">{% trans "Sweet gallery" %}</a></li>
+    <li><a href="contact/">{% trans "Contacts" %}</a></li>
+    <li><a href="feedback/">{% trans "Feedback" %}</a></li>
 </ul>
 
 <div id = "container">
