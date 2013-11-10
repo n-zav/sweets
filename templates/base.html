@@ -23,10 +23,10 @@
 
 <ul id="menu">
     <li><a href="/">{% trans "Main" %}</a></li>
-    <li><a href="about">{% trans "About us" %}</a></li>
+    <li><a href={% url "about" %}>{% trans "About us" %}</a></li>
     <li><a href="/">{% trans "Sweet gallery" %}</a></li>
-    <li><a href="contact/">{% trans "Contacts" %}</a></li>
-    <li><a href="feedback/">{% trans "Feedback" %}</a></li>
+    <li><a href={% url "contact" %}>{% trans "Contacts" %}</a></li>
+    <li><a href={% url "feedback" %}>{% trans "Feedback" %}</a></li>
 </ul>
 
 <div id = "container">

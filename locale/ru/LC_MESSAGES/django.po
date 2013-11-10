@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-06 01:29+0100\n"
+"POT-Creation-Date: 2013-11-07 19:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,25 +67,26 @@ msgstr "Наши контакты:"
 msgid "Gutchenkova str. 29, Donetsk"
 msgstr "ул. Гутченкова 29, Донецк"
 
-#: templates/feedback.html:9
+#: templates/feedback.html:5
+msgid "Contact us using the following form:"
+msgstr "Свяжитесь с нами с помощью этой формы:"
+
+#: templates/feedback.html:10
 msgid "Name"
 msgstr "Имя"
 
-#: templates/feedback.html:14
+#: templates/feedback.html:15
 msgid "Subject"
 msgstr "Тема"
 
-#: templates/feedback.html:19
+#: templates/feedback.html:20
 msgid "Message"
 msgstr "Сообщение"
 
-#: templates/feedback.html:24
+#: templates/feedback.html:25
 msgid "Email"
 msgstr "Email"
 
-#: templates/feedback.html:27
+#: templates/feedback.html:28
 msgid "Submit"
 msgstr "Отправить"
-
-#~ msgid "Copyright"
-#~ msgstr "Опа-попа-копирайт ()с.."
