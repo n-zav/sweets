@@ -10,7 +10,8 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('',
-                       url(r'^$', ListView.as_view(model=Product, template_name="index.html"), name='home'),
+                       url(r'^$', ListView.as_view(model=Product, template_name="index.html", paginate_by=10),
+                           name='home'),
                        url(r'^about/', TemplateView.as_view(template_name="about.html"),
                            name='about'),
                        url(r'^contact/', TemplateView.as_view(template_name="contacts.html"),

@@ -88,3 +88,7 @@ img#about {
 form {
     padding-bottom: 30px;
 }
+.paginator {
+    color: blue;
+    font: bold;
+}
