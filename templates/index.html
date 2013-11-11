@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block extra_js %}
-    <script type="text/javascript" src="{{ STATIC_URL }}js/application.js" ></script>
+    <script type="text/javascript" src="/static/js/application.js" ></script>
 {% endblock %}
 
 {% block content %}
@@ -11,7 +11,7 @@
         <li><h3>{{ product.name }}</h3>
                 <img src="{{ product.image.url }}"/>
          <p class="description"><b>Цена:</b> {{ product.price }} грн
-             <br /> <b>Конфеты:</b> {{ product.candies }}
+             <br /> <b>Состав:</b> {{ product.content }}
              <br /> <b>Размер:</b> {{ product.height }}х{{ product.width }}
              <br /> <b>Предзаказ:</b> {{ product.pre_order }}
           </p>

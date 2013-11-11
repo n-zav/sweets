@@ -3,6 +3,6 @@ from sweets.models import Product
 
 
 class ProductTranslationOptions(TranslationOptions):
-    fields = ('name', 'candies', 'pre_order')
+    fields = ('name', 'content', 'pre_order')
 
 translator.register(Product, ProductTranslationOptions)
