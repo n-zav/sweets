@@ -19,4 +19,16 @@
         {% endfor %}
     </ul>
 
+    {# .... **pagination section** .... #}
+    {% if page_obj.has_previous %}
+          <a class="paginator" href= "?page={{ page_obj.previous_page_number }}">previous </a>
+        {% endif %}
+
+        <span class="paginator">
+          Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+          <a class="paginator" href="?page={{ page_obj.next_page_number }}">next</a>
+    {% endif %}
 {% endblock %}
