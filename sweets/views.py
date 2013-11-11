@@ -1,12 +1,6 @@
-from django.views.generic import TemplateView
-
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from sweets.forms import ContactForm
-
-
-class HomePageView(TemplateView):
-    template_name = "index.html"
 
 
 def feedback(request):

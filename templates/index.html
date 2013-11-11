@@ -7,44 +7,16 @@
 
 {% block content %}
     <ul class="image">
-        <li><h3>Ананас</h3>
-         <img src="/static/images/ananas.jpg" >
-         <p class="description"><b>Цена:</b> 150 грн
-             <br /> <b>Конфеты:</b> 650гр "Тофита"
-             <br /> <b>Размер:</b> 36x13
-             <br /> <b>Предзаказ:</b> 1 день (с сегодня на завтра)
+        {% for product in object_list %}
+        <li><h3>{{ product.name }}</h3>
+                <img src="{{ product.image.url }}"/>
+         <p class="description"><b>Цена:</b> {{ product.price }} грн
+             <br /> <b>Конфеты:</b> {{ product.candies }}
+             <br /> <b>Размер:</b> {{ product.height }}х{{ product.width }}
+             <br /> <b>Предзаказ:</b> {{ product.pre_order }}
           </p>
         </li>
-
-        <li>
-         <h3>Виноградная гроздь</h3>
-         <img src="/static/images/grapes.jpg" >
-         <p class="description"><b>Цена:</b> 150 грн
-             <br /> <b>Конфеты:</b>  400 гр. "Бим-бом", Фундук в шоколаде 50гр
-             <br /> <b>Размер:</b> 24x12
-             <br /> <b>Предзаказ:</b> 1-2 дня
-          </p>
-        </li>
-
-        <li>
-         <h3>Ёжик</h3>
-         <img src="/static/images/hedgehog.jpg" >
-         <p class="description"><b>Цена:</b> 150 грн
-             <br /> <b>Конфеты:</b> Миндаль в шоколаде, Фундук в шоколаде, "Ангаже", "Бим-бом" всего 200 гр
-             <br /> <b>Размер:</b> 25х18
-             <br /> <b>Предзаказ:</b> 1-2 дня
-          </p>
-        </li>
-
-        <li>
-         <h3>Принцесска</h3>
-         <img src="/static/images/pink_princess.jpg" >
-         <p class="description"><b>Цена:</b> 280 грн
-             <br /> <b>Конфеты:</b> "Ангаже" 500гр, "Декорель" 200гр
-             <br /> <b>Размер:</b> 36х30
-             <br /> <b>Предзаказ:</b> 3-4 дня
-          </p>
-        </li>
+        {% endfor %}
     </ul>
 
 {% endblock %}

@@ -1,25 +1,21 @@
 # Django settings for sweets project.
+import os
 from local_settings import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('nastya', 'nastya.zavalkina@gmail.com'),
 )
 
 MANAGERS = ADMINS
 
+gettext = lambda s: s
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
-    }
+    'default': dict(ENGINE='django.db.backends.postgresql_psycopg2', NAME='sweets_db', USER='sweets_user',
+                    PASSWORD='123123q', HOST='127.0.0.1', PORT='')
 }
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
@@ -36,6 +32,11 @@ TIME_ZONE = 'America/Chicago'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
+LANGUAGES = (
+    ('ru', gettext('Russian')),
+    ('en-us', gettext('English')),
+)
+
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
@@ -51,12 +52,12 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = '/home/nastya/PycharmProjects/sweets/media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -81,7 +82,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    #  'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -91,7 +92,7 @@ SECRET_KEY = '!0f@%aaj93n9o9i6fl&)!2pbc#5aa=d+s=_e2yvhv(=h^gafn0'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    #  'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -100,7 +101,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.locale.LocaleMiddleware'
+    'django.middleware.locale.LocaleMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -110,11 +111,22 @@ ROOT_URLCONF = 'sweets.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'sweets.wsgi.application'
 
+PROJECT_DIR = os.path.dirname(__file__)
+
 TEMPLATE_DIRS = (
     '/home/nastya/PycharmProjects/sweets/templates'
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.contrib.messages.context_processors.messages',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.request',
+    'django.core.context_processors.media',
 )
 
 INSTALLED_APPS = (
@@ -124,11 +136,14 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'jquery'
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'jquery',
+    'sweets',
+    'south',
+
+    'django.contrib.admin',
+    'django.contrib.admindocs',
+
+    'modeltranslation'
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
@@ -163,5 +178,5 @@ LOGGING = {
 }
 
 LOCALE_PATHS = (
-  '/home/nastya/PycharmProjects/sweets/locale',
+    '/home/nastya/PycharmProjects/sweets/locale',
 )
