@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-10 21:25+0100\n"
+"POT-Creation-Date: 2013-11-12 17:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: sweets/settings.py:37
+#: sweets/settings.py:36
 msgid "Russian"
 msgstr "Русский"
 
-#: sweets/settings.py:38
+#: sweets/settings.py:37
 msgid "English"
 msgstr "Английский"
+
+#: sweets/views.py:31
+msgid "Product name"
+msgstr "Названию"
+
+#: sweets/views.py:32
+msgid "Date added"
+msgstr "Дате"
+
+#: sweets/views.py:33
+msgid "Price"
+msgstr "Цене"
 
 #: templates/about.html:7 templates/base.html:26
 msgid "About us"
 msgstr "О нас"
 
-#: templates/about.html:8
+#: templates/about.html:9
 msgid ""
 "Candy composition is always a sweet present, a decoration, and a nice "
 "surprise"
@@ -37,7 +49,7 @@ msgstr ""
 "Композиция из конфет это и сладкий подарок, и украшение стола, и приятный "
 "сюрприз"
 
-#: templates/about.html:10
+#: templates/about.html:11
 msgid ""
 "\n"
 "            We make compositions of any size and style. We are open for your "
@@ -52,18 +64,14 @@ msgstr ""
 "нам.        "
 
 #: templates/base.html:25
-msgid "Main"
-msgstr "Главная"
-
-#: templates/base.html:27
 msgid "Sweet gallery"
 msgstr "Сладкая галлерея"
 
-#: templates/base.html:28
+#: templates/base.html:27
 msgid "Contacts"
 msgstr "Контакты"
 
-#: templates/base.html:29
+#: templates/base.html:28
 msgid "Feedback"
 msgstr "Обратная связь"
 
@@ -98,3 +106,21 @@ msgstr "Email"
 #: templates/feedback.html:28
 msgid "Submit"
 msgstr "Отправить"
+
+#: templates/index.html:24
+msgid "uah"
+msgstr "грн"
+
+#: templates/sortable_listview/pagination.html:8
+#: templates/sortable_listview/pagination.html:11
+msgid "Prev"
+msgstr "предыдущая"
+
+#: templates/sortable_listview/pagination.html:32
+#: templates/sortable_listview/pagination.html:35
+msgid "Next"
+msgstr "следующая"
+
+#: templates/sortable_listview/sorting.html:3
+msgid "Sort by:"
+msgstr "Сортировать по:"

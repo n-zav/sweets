@@ -1,4 +1,6 @@
-<span class="sorting-title"> Sort by: </span>
+{% load i18n %}
+
+<span class="sorting-title"> {% trans "Sort by:" %} </span>
     {% for sort_link in sort_link_list %}
         <span class="sorting">
             <a class="sorting" href="{{ sort_link.path }}">

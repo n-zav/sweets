@@ -1,31 +1,39 @@
+{% load i18n %}
+
 {% if is_paginated %}
     <ul class="pagination">
     {% if page_obj.has_previous %}
-      <li class="other"><a href="?page=1&amp;{{ current_sort_query }}">First</a></li>
-      <li class="other"><a href="?page={{ page_obj.previous_page_number }}&amp;{{ current_sort_query }}">Prev</a></li>
+      {# <li class="other"><a href="?page=1&amp;{{ current_sort_query }}">{% trans "First" %}</a></li> #}
+      <li class="other"><a href="?page={{ page_obj.previous_page_number }}&amp;
+        {{ current_sort_query }}">{% trans "Prev" %}</a></li>
     {% else %}
-      <li class="disabled"><span>First</span></li>
-      <li class="disabled"><span>Prev</span></li>
+      {# <li class="disabled"><span>{% trans "First" %}</span></li> #}
+      <li class="disabled"><span>{% trans "Prev" %}</span></li>
     {% endif %}
     {% if not page_obj.has_next and page_obj.number >= 3 %}
-      <li class="other"><a href="?page={{ page_obj.number|add:"-2" }}&amp;{{ current_sort_query }}">{{ page_obj.number|add:"-2" }}</a></li>
+      <li class="other"><a href="?page={{ page_obj.number|add:"-2" }}&amp;{{ current_sort_query }}">
+        {{ page_obj.number|add:"-2" }}</a></li>
     {% endif %}
     {% if page_obj.has_previous %}
-      <li class="other"><a href="?page={{ page_obj.previous_page_number }}&amp;{{ current_sort_query }}">{{ page_obj.previous_page_number }}</a></li>
+      <li class="other"><a href="?page={{ page_obj.previous_page_number }}&amp;{{ current_sort_query }}">
+        {{ page_obj.previous_page_number }}</a></li>
     {% endif %}
       <li class="active"><a href="#">{{ page_obj.number }}</a></li>
     {% if page_obj.has_next %}
-      <li class="other"><a href="?page={{ page_obj.next_page_number }}&amp;{{ current_sort_query }}">{{ page_obj.next_page_number }}</a></li>
+      <li class="other"><a href="?page={{ page_obj.next_page_number }}&amp;{{ current_sort_query }}">
+        {{ page_obj.next_page_number }}</a></li>
     {% endif %}
     {% if not page_obj.has_previous and page_obj.paginator.num_pages >= 3 %}
-      <li class="other"><a href="?page={{ page_obj.number|add:"2" }}&amp;{{ current_sort_query }}">{{ page_obj.number|add:"2" }}</a></li>
+      <li class="other"><a href="?page={{ page_obj.number|add:"2" }}&amp;{{ current_sort_query }}">
+          {{ page_obj.number|add:"2" }}</a></li>
     {% endif %}
     {% if page_obj.has_next %}
-      <li class="other"><a href="?page={{ page_obj.next_page_number }}&amp;{{ current_sort_query }}">Next</a></li>
-      <li><a href="?page={{ page_obj.paginator.num_pages }}&amp;{{ current_sort_query }}">Last</a></li>
+      <li class="other"><a href="?page={{ page_obj.next_page_number }}&amp;
+        {{ current_sort_query }}">{% trans "Next" %}</a></li>
+      {# <li><a href="?page={{ page_obj.paginator.num_pages }}&amp;{{ current_sort_query }}">Last</a></li> #}
     {% else %}
-      <li class="disabled"><span>Next</span></li>
-      <li class="disabled"><span>Last</span></li>
+      <li class="disabled"><span>{% trans "Next" %}</span></li>
+      {# <li class="disabled"><span>{% trans "Last" %}</span></li> #}
     {% endif %}
     </ul>
 {% endif %}

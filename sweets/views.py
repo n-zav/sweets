@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from sweets.forms import ContactForm
 from sortable_listview import SortableListView
 from sweets.models import Product
+from django.utils.translation import ugettext_lazy as _
 
 
 def feedback(request):
@@ -27,10 +28,10 @@ def feedback(request):
 
 
 class ProductListView(SortableListView):
-    allowed_sort_fields = {'name': {'default_direction': '', 'verbose_name': 'Name'},
-                           'date': {'default_direction': '-','verbose_name': 'Date added'},
-                           'price': {'default_direction': '-','verbose_name': 'Price'}}
+    allowed_sort_fields = {'name': {'default_direction': '', 'verbose_name': _('Product name')},
+                           'date': {'default_direction': '-','verbose_name': _('Date added')},
+                           'price': {'default_direction': '-','verbose_name': _('Price')}}
     default_sort_field = 'date'
-    paginate_by = 10
+    paginate_by = 5
     template_name = 'index.html'
     model = Product
