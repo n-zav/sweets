@@ -28,7 +28,8 @@ def feedback(request):
 
 class ProductListView(SortableListView):
     allowed_sort_fields = {'name': {'default_direction': '', 'verbose_name': 'Name'},
-                           'date': {'default_direction': '-','verbose_name': 'Added On'}}
+                           'date': {'default_direction': '-','verbose_name': 'Date added'},
+                           'price': {'default_direction': '-','verbose_name': 'Price'}}
     default_sort_field = 'date'
     paginate_by = 10
     template_name = 'index.html'
