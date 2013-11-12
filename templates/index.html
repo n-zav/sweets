@@ -1,23 +1,33 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
 {% block extra_js %}
-    <script type="text/javascript" src="/static/js/application.js" ></script>
+    <script src="/static/js/lightbox-2.6.min.js"></script>
+{% endblock %}
+
+{% block extra_css %}
+    <link href="/static/css/lightbox.css" rel="stylesheet" />
 {% endblock %}
 
 {% block content %}
     {% include 'sortable_listview/sorting.html' %}
+    <span class="pager">{% include 'sortable_listview/pagination.html' %}</span>
     <ul class="image">
-        {% for product in object_list %}
-        <li><h3>{{ product.name }}</h3>
-                <img src="{{ product.image.url }}"/>
-         <p class="description"><b>Цена:</b> {{ product.price }} грн
-             <br /> <b>Состав:</b> {{ product.content }}
-             <br /> <b>Размер:</b> {{ product.height }}х{{ product.width }}
-             <br /> <b>Предзаказ:</b> {{ product.pre_order }}
-          </p>
-        </li>
-        {% endfor %}
+            {% for product in object_list %}
+                <a href="{{ product.image.url }}"
+                   data-lightbox="image-1"
+                   title="{{ product.name }}">
+                   <img class="product" src="{{ product.image.url }}" />
+                </a>
+                <span class="description"><h3>{{ product.name }}</h3>
+                    <b>Цена:</b> {{ product.price }} {% trans  "uah" %}
+                    <br /> <b>Состав:</b> {{ product.content }}
+                    <br /> <b>Размер:</b> {{ product.height }}х{{ product.width }}
+                    <br /> <b>Предзаказ:</b> {{ product.pre_order }}
+                 </span>
+                <br />
+            {% endfor %}
     </ul>
     {% include 'sortable_listview/pagination.html' %}
 {% endblock %}
