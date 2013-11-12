@@ -1,17 +1,15 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView, ListView
-from sweets.views import feedback
+from sweets.views import feedback, ProductListView
 
 from django.conf import settings
-from sweets.models import Product
 
 from django.contrib import admin
 admin.autodiscover()
 
 
 urlpatterns = patterns('',
-                       url(r'^$', ListView.as_view(model=Product, template_name="index.html", paginate_by=10),
-                           name='home'),
+                       url(r'^$', ProductListView.as_view(), name='product-list'),
                        url(r'^about/', TemplateView.as_view(template_name="about.html"),
                            name='about'),
                        url(r'^contact/', TemplateView.as_view(template_name="contacts.html"),

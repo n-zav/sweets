@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from sweets.forms import ContactForm
+from sortable_listview import SortableListView
+from sweets.models import Product
 
 
 def feedback(request):
@@ -22,3 +24,12 @@ def feedback(request):
     return render(request, 'feedback.html', {
         'form': form,
     })
+
+
+class ProductListView(SortableListView):
+    allowed_sort_fields = {'name': {'default_direction': '', 'verbose_name': 'Name'},
+                           'date': {'default_direction': '-','verbose_name': 'Added On'}}
+    default_sort_field = 'date'
+    paginate_by = 10
+    template_name = 'index.html'
+    model = Product

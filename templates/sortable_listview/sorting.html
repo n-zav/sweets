@@ -1,0 +1,13 @@
+<span class="sorting-title"> Sort by: </span>
+    {% for sort_link in sort_link_list %}
+        <span class="sorting">
+            <a class="sorting" href="{{ sort_link.path }}">
+                <span class="{{ sort_link.indicator }}">
+                    {{ sort_link.title }}
+                    {% if sort_link.indicator == 'sort-asc' %}▲{% endif %}
+                    {% if sort_link.indicator == 'sort-desc' %}▼{% endif %}
+                </span>
+            </a>
+        </span>
+        &nbsp;
+    {% endfor %}

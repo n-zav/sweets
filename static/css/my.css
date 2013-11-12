@@ -52,7 +52,7 @@ ul#menu li.backLava {
     background-color:#F8CD64;
     border-radius: 10px;
 }
-a {
+ul#menu a {
     color: white;
     text-decoration: none;
 }
@@ -65,7 +65,7 @@ a {
 #content {
     height: 100%;
     margin: 0 40px 40px 40px;
-    padding: 10px 0 0 0;
+    padding: 30px 10px;
 }
 p.about {
     width: 335px;
@@ -88,7 +88,53 @@ img#about {
 form {
     padding-bottom: 30px;
 }
-.paginator {
-    color: blue;
-    font: bold;
+.sorting {
+    color: #F57C85;
+    text-decoration: none;
+}
+.sort-asc {
+    color: white;
+    border-radius: 10px;
+    background-color: #F8CD64;
+    padding: 5px;
+}
+.sort-desc {
+    color: white;
+    border-radius: 10px;
+    background-color: #F8CD64;
+    padding: 5px;
+}
+span.sorting {
+    color: #F57C85;
+}
+span.sorting-title {
+    color: black;
+}
+ul.pagination {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: #F57C85;
+}
+ul li {
+    display: inline;
+}
+li.other {
+    width: 10px;
+}
+li.active {
+    color: white;
+    border-radius: 10px;
+    background-color: #F8CD64;
+    padding: 5px;
+    width: 10px;
+}
+li.disabled {
+    color: #F57C85;
+    width: 10px;
+}
+ul.pagination a {
+    text-decoration: none;
+    color: inherit;
 }
