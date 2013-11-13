@@ -6,30 +6,33 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(/static/img/background2.jpg);
+    color: darkslategrey;
 }
 #map_canvas {
     border-radius: 10px;
     margin: auto;
 }
 img.product {
-    width: 250px;
     border-radius: 10px;
     cursor: pointer;
     position: relative;
     margin: 20px 0 0;
+    width: 250px;
 }
 span.description {
-    width: 335px;
+    width: 390px;
     padding: 0;
     background-size: contain;
     border-radius: 10px;
     float: right;
     color: darkslategray;
     font-family: serif;
+    margin: 3px 30px 0 0;
 }
 ul.image{
     list-style-type: none;
     position: relative;
+    margin: 0 10px 10px 0;
 }
 ul#menu {
     list-style:none;
@@ -66,21 +69,29 @@ ul#menu a {
 #content {
     height: 100%;
     margin: 0;
-    padding: 30px 10px;
+    padding: 0 10px 30px;
 }
 #about {
     height: 400px;
+    padding: 20px 0 0 0;
+    color: darkslategrey;
 }
 p.about {
     font-family: serif;
     margin: 0 auto 0 auto;
-    color: darkslategrey;
 }
 #about img {
     width: 335px;
     border-radius: 10px;
     float: left;
     margin: 10px;
+}
+#contacts {
+    padding: 20px 0;
+    color: darkslategrey;
+}
+#feedback {
+    padding: 20px 0;
 }
 .field {
     height: 25px;
@@ -158,4 +169,7 @@ ul#footer {
     color: white;
     text-align: right;
     font-size: 8pt;
+}
+#sort_page {
+    padding: 30px 10px;
 }

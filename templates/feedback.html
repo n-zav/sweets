@@ -2,6 +2,7 @@
 {% load i18n %}
 
 {% block content %}
+    <div id="feedback">
     <h3>{% trans "Contact us using the following form:" %}</h3>
     <form action="/feedback/" method="post">{% csrf_token %}
            {{ form.non_field_errors }}
@@ -27,4 +28,5 @@
             </div>
             <p><input type="submit" value="{% trans "Submit" %}" /></p>
         </form>
+    </div>
 {% endblock %}

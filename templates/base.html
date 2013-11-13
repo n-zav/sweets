@@ -1,8 +1,9 @@
 {% load i18n %}
+{% load staticfiles %}
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Sweet fun</title>
+    <title>{% trans "Sweets" %}</title>
     <meta charset="utf-8">
     {% block extra_head %} {% endblock %}
 
@@ -21,15 +22,14 @@
 </head>
 <body>
 
-<ul id="menu">
-    <li><a href="/">{% trans "Sweet gallery" %}</a></li>
-    <li><a href={% url "about" %}>{% trans "About us" %}</a></li>
-    <li><a href={% url "contact" %}>{% trans "Contacts" %}</a></li>
-    <li><a href={% url "feedback" %}>{% trans "Feedback" %}</a></li>
-</ul>
+    <ul id="menu">
+        <li><a href="/">{% trans "Sweet gallery" %}</a></li>
+        <li><a href={% url "about" %}>{% trans "About us" %}</a></li>
+        <li><a href={% url "contact" %}>{% trans "Contacts" %}</a></li>
+        <li><a href={% url "feedback" %}>{% trans "Feedback" %}</a></li>
+    </ul>
 
 <div id = "container">
-
     <div id="content">
         {% block content %} {% endblock %}
     </div>

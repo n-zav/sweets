@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-12 17:49+0100\n"
+"POT-Creation-Date: 2013-11-13 16:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgstr "Дате"
 msgid "Price"
 msgstr "Цене"
 
-#: templates/about.html:7 templates/base.html:26
+#: templates/about.html:7 templates/base.html:27
 msgid "About us"
 msgstr "О нас"
 
@@ -63,15 +63,19 @@ msgstr ""
 "        Конфеты вы можете выбрать самостоятельно, а можете доверить это "
 "нам.        "
 
-#: templates/base.html:25
+#: templates/base.html:6
+msgid "Sweets"
+msgstr "Букеты из конфет"
+
+#: templates/base.html:26
 msgid "Sweet gallery"
 msgstr "Сладкая галлерея"
 
-#: templates/base.html:27
+#: templates/base.html:28
 msgid "Contacts"
 msgstr "Контакты"
 
-#: templates/base.html:28
+#: templates/base.html:29
 msgid "Feedback"
 msgstr "Обратная связь"
 
@@ -80,34 +84,34 @@ msgid "Our contacts:"
 msgstr "Наши контакты:"
 
 #: templates/contacts.html:13
-msgid "Gutchenkova str. 29, Donetsk"
-msgstr "ул. Гутченкова 29, Донецк"
+msgid "Kadievskaya str. 6, Donetsk"
+msgstr "ул.Кадиевская 6, Донецк"
 
-#: templates/feedback.html:5
+#: templates/feedback.html:6
 msgid "Contact us using the following form:"
 msgstr "Свяжитесь с нами с помощью этой формы:"
 
-#: templates/feedback.html:10
+#: templates/feedback.html:11
 msgid "Name"
 msgstr "Имя"
 
-#: templates/feedback.html:15
+#: templates/feedback.html:16
 msgid "Subject"
 msgstr "Тема"
 
-#: templates/feedback.html:20
+#: templates/feedback.html:21
 msgid "Message"
 msgstr "Сообщение"
 
-#: templates/feedback.html:25
+#: templates/feedback.html:26
 msgid "Email"
 msgstr "Email"
 
-#: templates/feedback.html:28
+#: templates/feedback.html:29
 msgid "Submit"
 msgstr "Отправить"
 
-#: templates/index.html:24
+#: templates/index.html:27
 msgid "uah"
 msgstr "грн"
 
