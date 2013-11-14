@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-13 16:51+0100\n"
+"POT-Creation-Date: 2013-11-14 01:22+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,27 +41,25 @@ msgstr "Цене"
 msgid "About us"
 msgstr "О нас"
 
-#: templates/about.html:9
-msgid ""
-"Candy composition is always a sweet present, a decoration, and a nice "
-"surprise"
-msgstr ""
-"Композиция из конфет это и сладкий подарок, и украшение стола, и приятный "
-"сюрприз"
-
 #: templates/about.html:11
 msgid ""
-"\n"
-"            We make compositions of any size and style. We are open for your "
-"creative ideas.\n"
-"            You also can choose candies on your own or we can do it for you\n"
-"        "
+"Candy composition is always a good present, a decoration, and a nice "
+"surprise."
 msgstr ""
-"\n"
-"            Мы делаем композиции любого размера, стиля. Мы открыты для ваших "
-"творческих предложений.\n"
-"        Конфеты вы можете выбрать самостоятельно, а можете доверить это "
-"нам.        "
+"Композиция из конфет это и садкий подарок и украшение стола, и приятный "
+"сюрприз."
+
+#: templates/about.html:12
+msgid ""
+"We make compositions of any size and style. We are open for your creative "
+"ideas."
+msgstr ""
+"Мы делаем композиции любого размера и стиля и открыты для ваших творческих "
+"предложений."
+
+#: templates/about.html:13
+msgid "You also can choose candies on your own or we can do it for you"
+msgstr "Вы можете самостоятельно выбрать конфеты а моете доверить это мастеру."
 
 #: templates/base.html:6
 msgid "Sweets"

@@ -21,13 +21,22 @@
 
 </head>
 <body>
+    <div id="header">
+        <ul id="menu">
+            <li><a href="/">{% trans "Sweet gallery" %}</a></li>
+            <li><a href={% url "about" %}>{% trans "About us" %}</a></li>
+            <li><a href={% url "contact" %}>{% trans "Contacts" %}</a></li>
+            <li><a href={% url "feedback" %}>{% trans "Feedback" %}</a></li>
+        </ul>
 
-    <ul id="menu">
-        <li><a href="/">{% trans "Sweet gallery" %}</a></li>
-        <li><a href={% url "about" %}>{% trans "About us" %}</a></li>
-        <li><a href={% url "contact" %}>{% trans "Contacts" %}</a></li>
-        <li><a href={% url "feedback" %}>{% trans "Feedback" %}</a></li>
-    </ul>
+        <div id="phone">
+            <img id="phone-icon" src="/static/img/phone.png">
+            <span class="number">
+                +380 95 702 74 04
+                <br />+380 67 624 43 15
+            </span>
+        </div>
+    </div>
 
 <div id = "container">
     <div id="content">
@@ -38,7 +47,6 @@
 <ul id="footer">
     <li>n-zav </li>
     <li>2013</li>
-    <li>Django 1.5</li>
 </ul>
 
 </body>

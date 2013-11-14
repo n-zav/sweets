@@ -6,11 +6,11 @@
     <div id="about">
         <h3> {% trans "About us" %} </h3>
         <img class="about" src="/static/img/photo.JPG">
-        {% trans "Candy composition is always a sweet present, a decoration, and a nice surprise"%}
         <br/>
-        {% blocktrans %}
-            We make compositions of any size and style. We are open for your creative ideas.
-            You also can choose candies on your own or we can do it for you
-        {% endblocktrans %}
+            <div id="about_text">
+                {% trans "Candy composition is always a good present, a decoration, and a nice surprise." %}
+                {% trans "We make compositions of any size and style. We are open for your creative ideas." %}
+                {% trans  "You also can choose candies on your own or we can do it for you" %}
+            </div>
     </div>
 {% endblock %}
