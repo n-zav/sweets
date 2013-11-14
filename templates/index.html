@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% load i18n %}
+{% load sweets_extra %}
 
 
 {% block extra_js %}
@@ -21,7 +22,7 @@
                 <a href="{{ product.image.url }}"
                    data-lightbox="image-1"
                    title="{{ product.name }}">
-                  <img class="product" src="{{product.image.url }}" />
+                  <img class="product" src="{{product.image|thumbnail }}" />
                 </a>
                 <span class="description"><h3>{{ product.name }}</h3>
                     <b>Цена:</b> {{ product.price }} {% trans  "uah" %}
