@@ -67,7 +67,7 @@ msgstr "Букеты из конфет"
 
 #: templates/base.html:26
 msgid "Sweet gallery"
-msgstr "Сладкая галлерея"
+msgstr "Сладкая галерея"
 
 #: templates/base.html:28
 msgid "Contacts"
