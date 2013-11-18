@@ -1,6 +1,5 @@
 # Django settings for sweets project.
 import os
-from local_settings import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -86,7 +85,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '!0f@%aaj93n9o9i6fl&)!2pbc#5aa=d+s=_e2yvhv(=h^gafn0'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -202,3 +201,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+# Email settings for Heroku:
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
+EMAIL_PORT = 587
