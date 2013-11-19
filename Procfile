@@ -1,1 +1,1 @@
-web: gunicorn sweets.wsgi
+web: python manage.py collectstatic --noinput; gunicorn --pythonpath=sweets sweets.wsgi
