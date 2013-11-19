@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-14 01:22+0100\n"
+"POT-Creation-Date: 2013-11-19 13:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: sweets/settings.py:36
+#: sweets/settings.py:39
 msgid "Russian"
 msgstr "Русский"
 
-#: sweets/settings.py:37
+#: sweets/settings.py:40
 msgid "English"
 msgstr "Английский"
 
@@ -109,9 +109,25 @@ msgstr "Email"
 msgid "Submit"
 msgstr "Отправить"
 
-#: templates/index.html:27
+#: templates/index.html:28
+msgid "Product price"
+msgstr "Цена"
+
+#: templates/index.html:28
 msgid "uah"
 msgstr "грн"
+
+#: templates/index.html:29
+msgid "Content"
+msgstr "Состав"
+
+#: templates/index.html:30
+msgid "Size"
+msgstr "Размер"
+
+#: templates/index.html:31
+msgid "Pre-order"
+msgstr "Предзаказ"
 
 #: templates/sortable_listview/pagination.html:8
 #: templates/sortable_listview/pagination.html:11

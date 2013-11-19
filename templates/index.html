@@ -25,10 +25,10 @@
                   <img class="product" src="{{product.image|thumbnail }}" />
                 </a>
                 <span class="description"><h3>{{ product.name }}</h3>
-                    <b>Цена:</b> {{ product.price }} {% trans  "uah" %}
-                    <br /> <b>Состав:</b> {{ product.content }}
-                    <br /> <b>Размер:</b> {{ product.height }}х{{ product.width }}
-                    <br /> <b>Предзаказ:</b> {{ product.pre_order }}
+                    <b>{% trans "Product price" %}:</b> {{ product.price }} {% trans  "uah" %}
+                    <br /> <b>{% trans "Content" %}:</b> {{ product.content }}
+                    <br /> <b>{% trans "Size" %}:</b> {{ product.height }}х{{ product.width }}
+                    <br /> <b>{% trans "Pre-order" %}:</b> {{ product.pre_order }}
                  </span>
                 <br />
             {% endfor %}
