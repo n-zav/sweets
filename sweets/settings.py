@@ -1,5 +1,7 @@
 # Django settings for sweets project.
 import os
+import dj_database_url
+import socket
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -12,14 +14,16 @@ MANAGERS = ADMINS
 
 gettext = lambda s: s
 
-DATABASES = {
-    'default': dict(ENGINE='django.db.backends.postgresql_psycopg2', NAME='sweets_db', USER='sweets_user',
-                    PASSWORD='123123q', HOST='127.0.0.1', PORT='')
-}
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(APP_DIR)
+
+# Parse database configuration from $DATABASE_URL
+DATABASES = {'default': dj_database_url.config()}
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -51,7 +55,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = '/home/nastya/PycharmProjects/sweets/media'
+MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -110,14 +114,14 @@ ROOT_URLCONF = 'sweets.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'sweets.wsgi.application'
 
-PROJECT_DIR = os.path.dirname(__file__)
-
 TEMPLATE_DIRS = (
-    '/home/nastya/PycharmProjects/sweets/templates'
+    os.path.join(PROJECT_DIR, 'templates')
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
+
+print TEMPLATE_DIRS
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -179,12 +183,8 @@ LOGGING = {
 }
 
 LOCALE_PATHS = (
-    '/home/nastya/PycharmProjects/sweets/locale',
+    os.path.join(PROJECT_DIR, 'locale'),
 )
-
-# Parse database configuration from $DATABASE_URL
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -193,13 +193,12 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
-import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(APP_DIR, 'static'),
 )
 
 # Email settings for Heroku:
